@@ -7,30 +7,13 @@
  * Uncomment them to start implementing your solution.
  * Happy coding! 🚀
  */
+import { OldFashionedPrinter } from "./impl/fashioned.old-printer";
+import { NewFashionedPrinter } from "./impl/fashioned.new-printer";
 
-// interface Machine {
-//     print(document: string): void;
-//     scan(document: string): void;
-//     fax(document: string): void;
-// }
+const printer = new OldFashionedPrinter();
+printer.print("Document 1");
 
-// class OldFashionedPrinter implements Machine {
-//     print(document: string): void {
-//         console.log(`Printing document: ${document}`);
-//     }
-
-//     scan(document: string): void {
-//         throw new Error("Scan not supported");
-//     }
-
-//     fax(document: string): void {
-//         throw new Error("Fax not supported");
-//     }
-// }
-
-// const printer = new OldFashionedPrinter();
-// printer.print("Document 1");
-
-// printer.scan("Document 2"); // Lỗi: Scan not supported
-// printer.fax("Document 3");  // Lỗi: Fax not supported
-
+const newPrinter = new NewFashionedPrinter();
+newPrinter.print("Document 4");
+newPrinter.scan("Document 5");
+newPrinter.fax("Document 6");
